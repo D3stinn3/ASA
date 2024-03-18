@@ -13,4 +13,4 @@ class Monkay(ARC4Contract):
 
     @arc4.abimethod()
     def lottery(self, name: arc4.String, age: arc4.String) -> arc4.String:
-        return "Name, " + name + "Age, " + age
+        return "Name, " + name + " " + "Age, " + age
