@@ -1,0 +1,174 @@
+#pragma version 10
+
+smart_contracts.monkay.contract.Monkay.approval_program:
+    // smart_contracts/monkay/contract.py:4
+    // class Monkay(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@7
+    method "hello(string)string"
+    method "goodbye(string)string"
+    method "lottery(string,string)string"
+    txna ApplicationArgs 0
+    match main_hello_route@2 main_goodbye_route@3 main_lottery_route@4
+    err // reject transaction
+
+main_hello_route@2:
+    // smart_contracts/monkay/contract.py:6
+    // @arc4.abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is NoOp
+    txn ApplicationID
+    assert // is not creating
+    // smart_contracts/monkay/contract.py:4
+    // class Monkay(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/monkay/contract.py:6
+    // @arc4.abimethod()
+    callsub hello
+    byte 0x151f7c75
+    swap
+    concat
+    log
+    int 1
+    return
+
+main_goodbye_route@3:
+    // smart_contracts/monkay/contract.py:10
+    // @arc4.abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is NoOp
+    txn ApplicationID
+    assert // is not creating
+    // smart_contracts/monkay/contract.py:4
+    // class Monkay(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/monkay/contract.py:10
+    // @arc4.abimethod()
+    callsub goodbye
+    byte 0x151f7c75
+    swap
+    concat
+    log
+    int 1
+    return
+
+main_lottery_route@4:
+    // smart_contracts/monkay/contract.py:14
+    // @arc4.abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is NoOp
+    txn ApplicationID
+    assert // is not creating
+    // smart_contracts/monkay/contract.py:4
+    // class Monkay(ARC4Contract):
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
+    // smart_contracts/monkay/contract.py:14
+    // @arc4.abimethod()
+    callsub lottery
+    byte 0x151f7c75
+    swap
+    concat
+    log
+    int 1
+    return
+
+main_bare_routing@7:
+    // smart_contracts/monkay/contract.py:4
+    // class Monkay(ARC4Contract):
+    txn OnCompletion
+    !
+    assert // reject transaction
+    txn ApplicationID
+    !
+    assert // is creating
+    int 1
+    return
+
+
+// smart_contracts.monkay.contract.Monkay.hello(name: bytes) -> bytes:
+hello:
+    // smart_contracts/monkay/contract.py:6-7
+    // @arc4.abimethod()
+    // def hello(self, name: arc4.String) -> arc4.String:
+    proto 1 1
+    // smart_contracts/monkay/contract.py:8
+    // return "Hello, " + name
+    frame_dig -1
+    extract 2 0
+    byte "Hello, "
+    swap
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.monkay.contract.Monkay.goodbye(name: bytes) -> bytes:
+goodbye:
+    // smart_contracts/monkay/contract.py:10-11
+    // @arc4.abimethod()
+    // def goodbye(self, name: arc4.String) -> arc4.String:
+    proto 1 1
+    // smart_contracts/monkay/contract.py:12
+    // return "Goodbye, " + name
+    frame_dig -1
+    extract 2 0
+    byte "Goodbye, "
+    swap
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.monkay.contract.Monkay.lottery(name: bytes, age: bytes) -> bytes:
+lottery:
+    // smart_contracts/monkay/contract.py:14-15
+    // @arc4.abimethod()
+    // def lottery(self, name: arc4.String, age: arc4.String) -> arc4.String:
+    proto 2 1
+    // smart_contracts/monkay/contract.py:16
+    // return "Name, " + name + "Age, " + age
+    frame_dig -2
+    extract 2 0
+    byte "Name, "
+    swap
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    extract 2 0
+    byte "Age, "
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    extract 2 0
+    frame_dig -1
+    extract 2 0
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    retsub
