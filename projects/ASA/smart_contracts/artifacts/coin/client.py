@@ -27,21 +27,11 @@ _APP_SPEC_JSON = r"""{
             "call_config": {
                 "no_op": "CALL"
             }
-        },
-        "goodbye(string)string": {
-            "call_config": {
-                "no_op": "CALL"
-            }
-        },
-        "lottery(string,string)string": {
-            "call_config": {
-                "no_op": "CALL"
-            }
         }
     },
     "source": {
-        "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCgpzbWFydF9jb250cmFjdHMubW9ua2F5LmNvbnRyYWN0Lk1vbmtheS5hcHByb3ZhbF9wcm9ncmFtOgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBNb25rYXkoQVJDNENvbnRyYWN0KToKICAgIHR4biBOdW1BcHBBcmdzCiAgICBieiBtYWluX2JhcmVfcm91dGluZ0A3CiAgICBtZXRob2QgImhlbGxvKHN0cmluZylzdHJpbmciCiAgICBtZXRob2QgImdvb2RieWUoc3RyaW5nKXN0cmluZyIKICAgIG1ldGhvZCAibG90dGVyeShzdHJpbmcsc3RyaW5nKXN0cmluZyIKICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDAKICAgIG1hdGNoIG1haW5faGVsbG9fcm91dGVAMiBtYWluX2dvb2RieWVfcm91dGVAMyBtYWluX2xvdHRlcnlfcm91dGVANAogICAgZXJyIC8vIHJlamVjdCB0cmFuc2FjdGlvbgoKbWFpbl9oZWxsb19yb3V0ZUAyOgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weTo2CiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGlzIG5vdCBjcmVhdGluZwogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBNb25rYXkoQVJDNENvbnRyYWN0KToKICAgIHR4bmEgQXBwbGljYXRpb25BcmdzIDEKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25rYXkvY29udHJhY3QucHk6NgogICAgLy8gQGFyYzQuYWJpbWV0aG9kKCkKICAgIGNhbGxzdWIgaGVsbG8KICAgIGJ5dGUgMHgxNTFmN2M3NQogICAgc3dhcAogICAgY29uY2F0CiAgICBsb2cKICAgIGludCAxCiAgICByZXR1cm4KCm1haW5fZ29vZGJ5ZV9yb3V0ZUAzOgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weToxMAogICAgLy8gQGFyYzQuYWJpbWV0aG9kKCkKICAgIHR4biBPbkNvbXBsZXRpb24KICAgICEKICAgIGFzc2VydCAvLyBPbkNvbXBsZXRpb24gaXMgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBpcyBub3QgY3JlYXRpbmcKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25rYXkvY29udHJhY3QucHk6NAogICAgLy8gY2xhc3MgTW9ua2F5KEFSQzRDb250cmFjdCk6CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9ua2F5L2NvbnRyYWN0LnB5OjEwCiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgY2FsbHN1YiBnb29kYnllCiAgICBieXRlIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnQgMQogICAgcmV0dXJuCgptYWluX2xvdHRlcnlfcm91dGVANDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25rYXkvY29udHJhY3QucHk6MTQKICAgIC8vIEBhcmM0LmFiaW1ldGhvZCgpCiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gT25Db21wbGV0aW9uIGlzIE5vT3AKICAgIHR4biBBcHBsaWNhdGlvbklECiAgICBhc3NlcnQgLy8gaXMgbm90IGNyZWF0aW5nCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9ua2F5L2NvbnRyYWN0LnB5OjQKICAgIC8vIGNsYXNzIE1vbmtheShBUkM0Q29udHJhY3QpOgogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weToxNAogICAgLy8gQGFyYzQuYWJpbWV0aG9kKCkKICAgIGNhbGxzdWIgbG90dGVyeQogICAgYnl0ZSAweDE1MWY3Yzc1CiAgICBzd2FwCiAgICBjb25jYXQKICAgIGxvZwogICAgaW50IDEKICAgIHJldHVybgoKbWFpbl9iYXJlX3JvdXRpbmdANzoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25rYXkvY29udHJhY3QucHk6NAogICAgLy8gY2xhc3MgTW9ua2F5KEFSQzRDb250cmFjdCk6CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gcmVqZWN0IHRyYW5zYWN0aW9uCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgIQogICAgYXNzZXJ0IC8vIGlzIGNyZWF0aW5nCiAgICBpbnQgMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmtheS5jb250cmFjdC5Nb25rYXkuaGVsbG8obmFtZTogYnl0ZXMpIC0+IGJ5dGVzOgpoZWxsbzoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9tb25rYXkvY29udHJhY3QucHk6Ni03CiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgLy8gZGVmIGhlbGxvKHNlbGYsIG5hbWU6IGFyYzQuU3RyaW5nKSAtPiBhcmM0LlN0cmluZzoKICAgIHByb3RvIDEgMQogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weTo4CiAgICAvLyByZXR1cm4gIkhlbGxvLCAiICsgbmFtZQogICAgZnJhbWVfZGlnIC0xCiAgICBleHRyYWN0IDIgMAogICAgYnl0ZSAiSGVsbG8sICIKICAgIHN3YXAKICAgIGNvbmNhdAogICAgZHVwCiAgICBsZW4KICAgIGl0b2IKICAgIGV4dHJhY3QgNiAwCiAgICBzd2FwCiAgICBjb25jYXQKICAgIHJldHN1YgoKCi8vIHNtYXJ0X2NvbnRyYWN0cy5tb25rYXkuY29udHJhY3QuTW9ua2F5Lmdvb2RieWUobmFtZTogYnl0ZXMpIC0+IGJ5dGVzOgpnb29kYnllOgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weToxMC0xMQogICAgLy8gQGFyYzQuYWJpbWV0aG9kKCkKICAgIC8vIGRlZiBnb29kYnllKHNlbGYsIG5hbWU6IGFyYzQuU3RyaW5nKSAtPiBhcmM0LlN0cmluZzoKICAgIHByb3RvIDEgMQogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weToxMgogICAgLy8gcmV0dXJuICJHb29kYnllLCAiICsgbmFtZQogICAgZnJhbWVfZGlnIC0xCiAgICBleHRyYWN0IDIgMAogICAgYnl0ZSAiR29vZGJ5ZSwgIgogICAgc3dhcAogICAgY29uY2F0CiAgICBkdXAKICAgIGxlbgogICAgaXRvYgogICAgZXh0cmFjdCA2IDAKICAgIHN3YXAKICAgIGNvbmNhdAogICAgcmV0c3ViCgoKLy8gc21hcnRfY29udHJhY3RzLm1vbmtheS5jb250cmFjdC5Nb25rYXkubG90dGVyeShuYW1lOiBieXRlcywgYWdlOiBieXRlcykgLT4gYnl0ZXM6CmxvdHRlcnk6CiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9ua2F5L2NvbnRyYWN0LnB5OjE0LTE1CiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgLy8gZGVmIGxvdHRlcnkoc2VsZiwgbmFtZTogYXJjNC5TdHJpbmcsIGFnZTogYXJjNC5TdHJpbmcpIC0+IGFyYzQuU3RyaW5nOgogICAgcHJvdG8gMiAxCiAgICAvLyBzbWFydF9jb250cmFjdHMvbW9ua2F5L2NvbnRyYWN0LnB5OjE2CiAgICAvLyByZXR1cm4gIk5hbWUsICIgKyBuYW1lICsgIiAiICsgIkFnZSwgIiArIGFnZQogICAgZnJhbWVfZGlnIC0yCiAgICBleHRyYWN0IDIgMAogICAgYnl0ZSAiTmFtZSwgIgogICAgc3dhcAogICAgY29uY2F0CiAgICBkdXAKICAgIGxlbgogICAgaXRvYgogICAgZXh0cmFjdCA2IDAKICAgIHN3YXAKICAgIGNvbmNhdAogICAgZXh0cmFjdCAyIDAKICAgIGJ5dGUgIiAiCiAgICBjb25jYXQKICAgIGR1cAogICAgbGVuCiAgICBpdG9iCiAgICBleHRyYWN0IDYgMAogICAgc3dhcAogICAgY29uY2F0CiAgICBleHRyYWN0IDIgMAogICAgYnl0ZSAiQWdlLCAiCiAgICBjb25jYXQKICAgIGR1cAogICAgbGVuCiAgICBpdG9iCiAgICBleHRyYWN0IDYgMAogICAgc3dhcAogICAgY29uY2F0CiAgICBleHRyYWN0IDIgMAogICAgZnJhbWVfZGlnIC0xCiAgICBleHRyYWN0IDIgMAogICAgY29uY2F0CiAgICBkdXAKICAgIGxlbgogICAgaXRvYgogICAgZXh0cmFjdCA2IDAKICAgIHN3YXAKICAgIGNvbmNhdAogICAgcmV0c3ViCg==",
-        "clear": "I3ByYWdtYSB2ZXJzaW9uIDEwCgpzbWFydF9jb250cmFjdHMubW9ua2F5LmNvbnRyYWN0Lk1vbmtheS5jbGVhcl9zdGF0ZV9wcm9ncmFtOgogICAgLy8gc21hcnRfY29udHJhY3RzL21vbmtheS9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBNb25rYXkoQVJDNENvbnRyYWN0KToKICAgIGludCAxCiAgICByZXR1cm4K"
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCgpzbWFydF9jb250cmFjdHMuY29pbi5jb250cmFjdC5Db2luLmFwcHJvdmFsX3Byb2dyYW06CiAgICAvLyBzbWFydF9jb250cmFjdHMvY29pbi9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBDb2luKEFSQzRDb250cmFjdCk6CiAgICB0eG4gTnVtQXBwQXJncwogICAgYnogbWFpbl9iYXJlX3JvdXRpbmdANQogICAgbWV0aG9kICJoZWxsbyhzdHJpbmcpc3RyaW5nIgogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAogICAgbWF0Y2ggbWFpbl9oZWxsb19yb3V0ZUAyCiAgICBlcnIgLy8gcmVqZWN0IHRyYW5zYWN0aW9uCgptYWluX2hlbGxvX3JvdXRlQDI6CiAgICAvLyBzbWFydF9jb250cmFjdHMvY29pbi9jb250cmFjdC5weTo1CiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGlzIG5vdCBjcmVhdGluZwogICAgLy8gc21hcnRfY29udHJhY3RzL2NvaW4vY29udHJhY3QucHk6NAogICAgLy8gY2xhc3MgQ29pbihBUkM0Q29udHJhY3QpOgogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQogICAgLy8gc21hcnRfY29udHJhY3RzL2NvaW4vY29udHJhY3QucHk6NQogICAgLy8gQGFyYzQuYWJpbWV0aG9kKCkKICAgIGNhbGxzdWIgaGVsbG8KICAgIGJ5dGUgMHgxNTFmN2M3NQogICAgc3dhcAogICAgY29uY2F0CiAgICBsb2cKICAgIGludCAxCiAgICByZXR1cm4KCm1haW5fYmFyZV9yb3V0aW5nQDU6CiAgICAvLyBzbWFydF9jb250cmFjdHMvY29pbi9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBDb2luKEFSQzRDb250cmFjdCk6CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gcmVqZWN0IHRyYW5zYWN0aW9uCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgIQogICAgYXNzZXJ0IC8vIGlzIGNyZWF0aW5nCiAgICBpbnQgMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLmNvaW4uY29udHJhY3QuQ29pbi5oZWxsbyhuYW1lOiBieXRlcykgLT4gYnl0ZXM6CmhlbGxvOgogICAgLy8gc21hcnRfY29udHJhY3RzL2NvaW4vY29udHJhY3QucHk6NS02CiAgICAvLyBAYXJjNC5hYmltZXRob2QoKQogICAgLy8gZGVmIGhlbGxvKHNlbGYsIG5hbWU6IGFyYzQuU3RyaW5nKSAtPiBhcmM0LlN0cmluZzoKICAgIHByb3RvIDEgMQogICAgLy8gc21hcnRfY29udHJhY3RzL2NvaW4vY29udHJhY3QucHk6NwogICAgLy8gcmV0dXJuIG5hbWUKICAgIGZyYW1lX2RpZyAtMQogICAgcmV0c3ViCg==",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDEwCgpzbWFydF9jb250cmFjdHMuY29pbi5jb250cmFjdC5Db2luLmNsZWFyX3N0YXRlX3Byb2dyYW06CiAgICAvLyBzbWFydF9jb250cmFjdHMvY29pbi9jb250cmFjdC5weTo0CiAgICAvLyBjbGFzcyBDb2luKEFSQzRDb250cmFjdCk6CiAgICBpbnQgMQogICAgcmV0dXJuCg=="
     },
     "state": {
         "global": {
@@ -64,7 +54,7 @@ _APP_SPEC_JSON = r"""{
         }
     },
     "contract": {
-        "name": "Monkay",
+        "name": "Coin",
         "methods": [
             {
                 "name": "hello",
@@ -72,34 +62,6 @@ _APP_SPEC_JSON = r"""{
                     {
                         "type": "string",
                         "name": "name"
-                    }
-                ],
-                "returns": {
-                    "type": "string"
-                }
-            },
-            {
-                "name": "goodbye",
-                "args": [
-                    {
-                        "type": "string",
-                        "name": "name"
-                    }
-                ],
-                "returns": {
-                    "type": "string"
-                }
-            },
-            {
-                "name": "lottery",
-                "args": [
-                    {
-                        "type": "string",
-                        "name": "name"
-                    },
-                    {
-                        "type": "string",
-                        "name": "age"
                     }
                 ],
                 "returns": {
@@ -196,25 +158,6 @@ class HelloArgs(_ArgsBase[str]):
 
 
 @dataclasses.dataclass(kw_only=True)
-class GoodbyeArgs(_ArgsBase[str]):
-    name: str
-
-    @staticmethod
-    def method() -> str:
-        return "goodbye(string)string"
-
-
-@dataclasses.dataclass(kw_only=True)
-class LotteryArgs(_ArgsBase[str]):
-    name: str
-    age: str
-
-    @staticmethod
-    def method() -> str:
-        return "lottery(string,string)string"
-
-
-@dataclasses.dataclass(kw_only=True)
 class SimulateOptions:
     allow_more_logs: bool = dataclasses.field(default=False)
     allow_empty_signatures: bool = dataclasses.field(default=False)
@@ -268,55 +211,6 @@ class Composer:
         )
         return self
 
-    def goodbye(
-        self,
-        *,
-        name: str,
-        transaction_parameters: algokit_utils.TransactionParameters | None = None,
-    ) -> "Composer":
-        """Adds a call to `goodbye(string)string` ABI method
-        
-        :param str name: The `name` ABI parameter
-        :param algokit_utils.TransactionParameters transaction_parameters: (optional) Additional transaction parameters
-        :returns Composer: This Composer instance"""
-
-        args = GoodbyeArgs(
-            name=name,
-        )
-        self.app_client.compose_call(
-            self.atc,
-            call_abi_method=args.method(),
-            transaction_parameters=_convert_call_transaction_parameters(transaction_parameters),
-            **_as_dict(args, convert_all=True),
-        )
-        return self
-
-    def lottery(
-        self,
-        *,
-        name: str,
-        age: str,
-        transaction_parameters: algokit_utils.TransactionParameters | None = None,
-    ) -> "Composer":
-        """Adds a call to `lottery(string,string)string` ABI method
-        
-        :param str name: The `name` ABI parameter
-        :param str age: The `age` ABI parameter
-        :param algokit_utils.TransactionParameters transaction_parameters: (optional) Additional transaction parameters
-        :returns Composer: This Composer instance"""
-
-        args = LotteryArgs(
-            name=name,
-            age=age,
-        )
-        self.app_client.compose_call(
-            self.atc,
-            call_abi_method=args.method(),
-            transaction_parameters=_convert_call_transaction_parameters(transaction_parameters),
-            **_as_dict(args, convert_all=True),
-        )
-        return self
-
     def create_bare(
         self,
         *,
@@ -350,8 +244,8 @@ class Composer:
         return self
 
 
-class MonkayClient:
-    """A class for interacting with the Monkay app providing high productivity and
+class CoinClient:
+    """A class for interacting with the Coin app providing high productivity and
     strongly typed methods to deploy and call the app"""
 
     @typing.overload
@@ -399,7 +293,7 @@ class MonkayClient:
         app_name: str | None = None,
     ) -> None:
         """
-        MonkayClient can be created with an app_id to interact with an existing application, alternatively
+        CoinClient can be created with an app_id to interact with an existing application, alternatively
         it can be created with a creator and indexer_client specified to find existing applications by name and creator.
         
         :param AlgodClient algod_client: AlgoSDK algod client
@@ -490,53 +384,6 @@ class MonkayClient:
 
         args = HelloArgs(
             name=name,
-        )
-        result = self.app_client.call(
-            call_abi_method=args.method(),
-            transaction_parameters=_convert_call_transaction_parameters(transaction_parameters),
-            **_as_dict(args, convert_all=True),
-        )
-        return result
-
-    def goodbye(
-        self,
-        *,
-        name: str,
-        transaction_parameters: algokit_utils.TransactionParameters | None = None,
-    ) -> algokit_utils.ABITransactionResponse[str]:
-        """Calls `goodbye(string)string` ABI method
-        
-        :param str name: The `name` ABI parameter
-        :param algokit_utils.TransactionParameters transaction_parameters: (optional) Additional transaction parameters
-        :returns algokit_utils.ABITransactionResponse[str]: The result of the transaction"""
-
-        args = GoodbyeArgs(
-            name=name,
-        )
-        result = self.app_client.call(
-            call_abi_method=args.method(),
-            transaction_parameters=_convert_call_transaction_parameters(transaction_parameters),
-            **_as_dict(args, convert_all=True),
-        )
-        return result
-
-    def lottery(
-        self,
-        *,
-        name: str,
-        age: str,
-        transaction_parameters: algokit_utils.TransactionParameters | None = None,
-    ) -> algokit_utils.ABITransactionResponse[str]:
-        """Calls `lottery(string,string)string` ABI method
-        
-        :param str name: The `name` ABI parameter
-        :param str age: The `age` ABI parameter
-        :param algokit_utils.TransactionParameters transaction_parameters: (optional) Additional transaction parameters
-        :returns algokit_utils.ABITransactionResponse[str]: The result of the transaction"""
-
-        args = LotteryArgs(
-            name=name,
-            age=age,
         )
         result = self.app_client.call(
             call_abi_method=args.method(),

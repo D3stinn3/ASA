@@ -140,11 +140,20 @@ lottery:
     // def lottery(self, name: arc4.String, age: arc4.String) -> arc4.String:
     proto 2 1
     // smart_contracts/monkay/contract.py:16
-    // return "Name, " + name + "Age, " + age
+    // return "Name, " + name + " " + "Age, " + age
     frame_dig -2
     extract 2 0
     byte "Name, "
     swap
+    concat
+    dup
+    len
+    itob
+    extract 6 0
+    swap
+    concat
+    extract 2 0
+    byte " "
     concat
     dup
     len

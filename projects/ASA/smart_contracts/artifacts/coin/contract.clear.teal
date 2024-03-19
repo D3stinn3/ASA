@@ -1,0 +1,7 @@
+#pragma version 10
+
+smart_contracts.coin.contract.Coin.clear_state_program:
+    // smart_contracts/coin/contract.py:4
+    // class Coin(ARC4Contract):
+    int 1
+    return
